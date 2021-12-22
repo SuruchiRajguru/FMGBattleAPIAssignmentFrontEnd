@@ -3,22 +3,27 @@
 <table class="table table-hover" table-border="1" >
     <thead>
         <tr>
+            <th>id</th>
             <th>Name</th>
-            <th>Year</th>
             <th>Battle Number</th>
             <th>Attacker King</th>
             <th>Defender King</th>
+            <th>Attacker_1</th>
+            <th>Defender_1</th>
         </tr>
     </thead>
     <tbody>
-         <!-- <tr *ngFor="let battle of listAllBattles">
-            <td>{{ battle.name }}</td>
-            <td>{{ battle.year }}</td>
-            <td>{{ battle.battle_number }}</td>
-            <td>{{ battle.attacker_king }}</td>
-            <td>{{ batttle.defender_king}}</td>
+          <tr *ngFor="let b of battles">
+            <td>{{ b._id }}</td>
+            <td>{{ b.name }}</td>
+            <td>{{ b.battle_number }}</td>
+            
+            <td>{{ b.attacker_king }}</td>
+            <td>{{ b.defender_king}}</td>
+            <td>{{ b.attacker_1 }}</td>
+            <td>{{ b.defender_1 }}</td>
 
-        </tr>  -->
+        </tr> 
     </tbody>
 </table> 
 

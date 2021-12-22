@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-//import {HttpClient} from '@angular/common/http';
+import { Battle } from '../model/battle';
+import { BattleService } from '../services/battle.service';
 
 
 @Component({
@@ -8,16 +9,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./listallbattles.component.css']
 })
 export class ListallbattlesComponent implements OnInit {
- // listAllBattles:any;
- constructor() { }
-  //constructor(private _httpClient:HttpClient) { }
+ 
+  battles:Battle[]=[];
+ 
+  constructor(private battleService:BattleService) { }
+  
 
   ngOnInit(): void {
-    // this._httpClient.get('').subscribe(result=>{
-    //   this.listAllBattles=result;
-    //   console.log(this.listAllBattles);
-    // },)
-    
+    this.battleService.listBattle().subscribe(data=>{this.battles=data;});
   }
 
 }
